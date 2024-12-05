@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma de la página como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Establece el conjunto de caracteres como UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva -->
+    <title>Google Clone</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="css/main.css"> <!-- Vincula el archivo CSS para los estilos -->
+    <link rel="shortcut icon" href="assets/images/unnamed.png" type="image/x-icon"> <!-- Icono de la página en la pestaña del navegador -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> <!-- Carga FontAwesome para íconos -->
+</head>
+<body>
+
+    <!-- Barra de navegación en el encabezado -->
+    <header>
+        <nav>
+            <ul class="nav-right-section">
+                <li>
+                    <a href="https://mail.google.com/mail/?tab=wm&authuser=0&ogbl">Gmail</a> <!-- Enlace a Gmail -->
+                </li>
+                <li>
+                    <a href="https://www.google.com.ar/imghp?hl=es&tab=wi&authuser=0&ogbl">Imágenes</a> <!-- Enlace a la búsqueda de imágenes en Google -->
+                </li>
+                <li class="icon menu-icon">
+                    <a href=""></a> <!-- Ícono de menú, sin enlace aún -->
+                </li>
+                <li>
+                    <a href="">
+                        <img src="https://th.bing.com/th/id/OIP.l4oIzqcvGj5N_SeBy-S39wHaE8?rs=1&pid=ImgDetMain" alt="User picture"> <!-- Imagen de perfil del usuario -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <section class="main-logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""> <!-- Logo de Google -->
+        </section>
+
+        <!-- Barra de búsqueda -->
+        <section class="main-input">
+            <div class="main-input-container">
+                <span class="icon search-icon"></span> <!-- Ícono de búsqueda -->
+                <input type="text" id="searchValue"> <!-- Campo de texto para búsqueda -->
+                <button type="button" class="icon microphone-icon" onclick="voiceSearchModalOpen()"> <!-- Botón de micrófono, abre un modal para la búsqueda por voz -->
+                </button>
+            </div>
+        </section>
+
+        <!-- Botones de la página -->
+        <section class="main-buttons">
+            <div>
+                <button type="button" onclick="searchValue()">Buscar con Google</button> <!-- Botón para buscar con Google -->
+            </div>
+            <div>
+                <button type="button" onclick="luck()">Me siento con suerte</button> <!-- Botón para "Me siento con suerte" -->
+            </div>
+        </section>
+
+        <!-- Mensaje de pie de página con opciones de idioma -->
+        <section class="main-message">
+            <div>
+                <p>
+                    Ofrecido por Google en: 
+                    <a href="https://www.google.com.sv/setprefs?sig=0_6WgfE0CfjXt1RXiDKvWbmoOlzXs%3D&amp;hl=en&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQ2ZgBCA8">English</a>
+                    <a href="https://www.google.com.sv/setprefs?sig=0_6WgfE0CfjXt1RXiDKvWbmoOlzXs%3D&amp;hl=es-419&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQ2ZgBCBA">Español (Latinoamérica)</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer de la página con enlaces a diversas secciones -->
+    <footer>
+        <ul class="footer-left">
+            <li>
+                <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQkdQCCBc&url=https%3A%2F%2Fwww.google.com.sv%2Fintl%2Fes_ar%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw2bk4lkWqthdyorudVCh8uI">Publicidad</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQktQCCBg&url=https%3A%2F%2Fwww.google.com.sv%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw3mnU3yELvolYOvydRNQWem">Negocios</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQkNQCCBk&url=https%3A%2F%2Fabout.google%2F%3Futm_source%3Dgoogle-AR%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&usg=AOvVaw1ga7btx-q5sYcd7hBEywn8">Sobre Google</a>
+            </li>
+            <li>
+                <a href="https://google.com/search/howsearchworks/?fg=1">Cómo funciona la Búsqueda</a>
+            </li>
+        </ul>
+        <ul class="footer-right">
+            <li>
+                <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQ8awCCBM&url=https%3A%2F%2Fpolicies.google.com%2Fprivacy%3Ffg%3D1&usg=AOvVaw12z8DS9cd-g0Aokit_wxri">Privacidad</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQ8qwCCBQ&url=https%3A%2F%2Fpolicies.google.com%2Fterms%3Ffg%3D1&usg=AOvVaw3sEM_N0elgYQx8WbCXpj3n">Condiciones</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQzq0CCBU&url=https%3A%2F%2Fwww.google.com.sv%2Fpreferences%3Fhl%3Des&usg=AOvVaw2lcC3WvLlcZqXoZwF8vF5D">Preferencias</a>
+            </li>
+        </ul>
+    </footer
