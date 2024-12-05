@@ -292,6 +292,7 @@ footer ul li a {
 .voice-search-microphone-icon:hover {
     color: #fff; /* Cambia el color del texto/icono a blanco */
     background-color: #f44; /* Cambia el fondo a rojo */
+
 }
 
 /* Borde del icono de micrófono */
@@ -301,7 +302,7 @@ footer ul li a {
     position: absolute; /* Posición absoluta respecto al contenedor */
     text-align: center; /* Centrado del texto */
     border-radius: 50%; /* Forma circular */
-    border: 0 solid #ccc; /* Borde inicial */
+    border: 0 solid #cccccc; /* Borde inicial */
     box-sizing: content-box; /* No incluye bordes en el tamaño total */
     transition: border-width .13s; /* Transición suave para el grosor del borde */
 }
