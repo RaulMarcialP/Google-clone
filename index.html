@@ -38,16 +38,15 @@
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt=""> <!-- Logo de Google -->
         </section>
 
-        <!-- Barra de búsqueda -->
-        <section class="main-input">
-            <div class="main-input-container">
-                <span class="icon search-icon"></span> <!-- Ícono de búsqueda -->
-                <input type="text" id="searchValue"> <!-- Campo de texto para búsqueda -->
-                <button type="button" class="icon microphone-icon" onclick="voiceSearchModalOpen()"> <!-- Botón de micrófono, abre un modal para la búsqueda por voz -->
-                </button>
-            </div>
-        </section>
-
+    <!-- Barra de búsqueda -->
+    <section class="main-input">
+        <div class="main-input-container">
+            <span class="icon search-icon"></span> <!-- Ícono de búsqueda -->
+            <input type="text" id="searchValue"> <!-- Campo de texto para búsqueda -->
+            <button type="button" class="icon microphone-icon" onclick="voiceSearchModalOpen()"> <!-- Botón para búsqueda por voz -->
+            </button>
+        </div>
+    </section>       
         <!-- Botones de la página -->
         <section class="main-buttons">
             <div>
@@ -97,4 +96,30 @@
                 <a href="https://www.google.com.sv/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiNy4mc87vqAhUrF7kGHdZwAYEQzq0CCBU&url=https%3A%2F%2Fwww.google.com.sv%2Fpreferences%3Fhl%3Des&usg=AOvVaw2lcC3WvLlcZqXoZwF8vF5D">Preferencias</a>
             </li>
         </ul>
-    </footer
+    </footer>
+    <div class="modal-voice-search hide-modal">
+        <!-- Botón para cerrar el modal de búsqueda por voz -->
+        <button onclick="voiceSearchModalClose()" class="voice-search-close-modal">
+            ×
+        </button>
+    
+        <!-- Contenedor para mostrar los resultados de la búsqueda por voz -->
+        <div class="voice-search-result">
+            <!-- Párrafo editable donde se mostrará el texto transcrito por la voz -->
+            <p contenteditable class="voice-search-result-text"></p>
+        </div>
+    
+        <!-- Contenedor para mostrar la animación del micrófono -->
+        <div class="voice-search-animation">
+            <!-- Ícono de micrófono para indicar que el usuario debe hablar -->
+            <span class="voice-search-microphone-icon fas fa-microphone"></span>
+            <!-- Borde del ícono de micrófono -->
+            <span class="voice-search-microphone-border"></span>
+        </div>
+    </div>
+    
+    <!-- Archivos JavaScript para gestionar las funcionalidades -->
+    <script src="js/search.js"></script>
+    <script src="js/voice-search.js"></script>
+    </body>
+    </html>
